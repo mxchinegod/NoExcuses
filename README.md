@@ -1,5 +1,3 @@
-![banner](banner.png)
-
 <h1 align="center">
 
 🙅 NoExcuses!
