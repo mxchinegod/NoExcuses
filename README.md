@@ -14,7 +14,7 @@ This is a Rust program that removes phrases from all JSON files in a given direc
 To get started, clone the repository and run cargo build to compile the project. Then, you can run NoExcuses with the following command:
 
 ``` shell 
-./target/debug/no-excuses [DIRECTORY_PATH] [PHRASES_FILE_PATH]
+./target/debug/no_excuses [DIRECTORY_PATH] [PHRASES_FILE_PATH]
 Replace [DIRECTORY_PATH] with the path to the directory that contains the JSON files you want to modify, and [PHRASES_FILE_PATH] with the path to the file containing the list of phrases you want to remove. If [PHRASES_FILE_PATH] is not provided, NoExcuses will use the default path "./phrases.txt".
 ```
 
