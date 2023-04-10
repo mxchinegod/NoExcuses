@@ -1,14 +1,13 @@
 use std::env;
 use std::fs::{self, File};
-use std::io::{BufReader, Write};
+use std::io::{BufRead, BufReader, Write};
 use serde_json::Value;
 
 fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().collect();
-    let phrases_to_remove = vec![
-        "As an AI assistant, ",
-        "I'm an AI language model and "
-    ];
+    let file_name = &String::from("./phrases.txt");
+    let phrases_file_path = args.get(2).unwrap_or(file_name);
+    let phrases_to_remove = read_phrases_from_file(phrases_file_path)?;
 
     let dir_entries = fs::read_dir(&args[1])?;
     for entry in dir_entries {
@@ -30,7 +29,7 @@ fn main() -> std::io::Result<()> {
     Ok(())
 }
 
-fn remove_phrases_from_json(data: &mut Value, phrases: &[&str]) {
+fn remove_phrases_from_json(data: &mut Value, phrases: &[String]) {
     match data {
         Value::Object(map) => {
             for (_, value) in map.iter_mut() {
@@ -49,4 +48,15 @@ fn remove_phrases_from_json(data: &mut Value, phrases: &[&str]) {
         },
         _ => {}
     }
+}
+
+fn read_phrases_from_file(path: &str) -> std::io::Result<Vec<String>> {
+    let file = File::open(path)?;
+    let reader = BufReader::new(file);
+    let mut phrases = Vec::new();
+    for line in reader.lines() {
+        let line = line?;
+        phrases.push(line);
+    }
+    Ok(phrases)
 }
