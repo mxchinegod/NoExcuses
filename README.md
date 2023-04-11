@@ -4,12 +4,12 @@
 
 </h1>
 <p align="center">
-A super-fast way to delete/replace unwanted tokens in local training data.
+A super-fast way to delete/replace unwanted tokens in text training data.
 </p>
 
 This is a Rust program that removes phrases from all JSON files in a given directory. NoExcuses reads a list of phrases from a file, then iterates through each JSON file in a given directory and removes any occurrence of those phrases. NoExcuses writes back the modified JSON files to their original location.
 
-# 🚀 Getting Started
+## 🚀 Getting Started
 
 To get started, clone the repository and run cargo build to compile the project. Then, you can run NoExcuses with the following command:
 
@@ -18,17 +18,21 @@ To get started, clone the repository and run cargo build to compile the project.
 Replace [DIRECTORY_PATH] with the path to the directory that contains the JSON files you want to modify, and [PHRASES_FILE_PATH] with the path to the file containing the list of phrases you want to remove. If [PHRASES_FILE_PATH] is not provided, NoExcuses will use the default path "./phrases.txt".
 ```
 
-# 👌🏼 Usage
+## 👌🏼 Usage
 
 NoExcuses reads each JSON file in the specified directory and removes any occurrence of the phrases provided in the phrases file. The modified JSON files are then written back to their original location.
 
-# 🔌 Implementation Details
+## 🔮 Philosophy
+
+NoExcuses is designed to be used in early stages of token data processing. When considering if I should try doing similar work with vector representations, it doesn't make as much sense. Maybe I will change my mind about this in the future but this should happen prior to storing language vectors 😌
+
+## 🔌 Implementation Details
 
 NoExcuses uses the `serde_json` library to parse and modify the JSON files.
 
 The `remove_phrases_from_json` function recursively traverses the JSON data structure and removes any occurrence of the phrases provided in the phrases file.
 
-# 🙋 Contributing
+## 🙋 Contributing
 
 ##### Proper commit message format is required for automated changelog generation. Examples:
 
@@ -43,11 +47,12 @@ The `remove_phrases_from_json` function recursively traverses the JSON data stru
 
     Other commit types: refactor, perf, workflow, build, CI, typos, tests, types, wip, release, dep
 
-# ✅ To-Do
+### ✅ To-Do
 
 - [x] this README
+- [ ] add CSV logic
 
-# 📑 License
+### 📑 License
 
 This program is licensed under the MIT License. See the LICENSE file for more information.
 
