@@ -4,7 +4,7 @@
 
 </h1>
 <p align="center">
-A super-fast way to delete/replace unwanted tokens in text training data.
+A super-fast way to delete unwanted tokens in text training data.
 </p>
 
 This is a Rust program that removes phrases from all JSON files in a given directory. NoExcuses reads a list of phrases from a file, then iterates through each JSON file in a given directory and removes any occurrence of those phrases. NoExcuses writes back the modified JSON files to their original location.
@@ -15,8 +15,9 @@ To get started, clone the repository and run cargo build to compile the project.
 
 ``` shell 
 ./target/debug/no_excuses [DIRECTORY_PATH] [PHRASES_FILE_PATH]
-Replace [DIRECTORY_PATH] with the path to the directory that contains the JSON files you want to modify, and [PHRASES_FILE_PATH] with the path to the file containing the list of phrases you want to remove. If [PHRASES_FILE_PATH] is not provided, NoExcuses will use the default path "./phrases.txt".
 ```
+
+Replace `[DIRECTORY_PATH]` with the path to the directory that contains the JSON files you want to modify, and `[PHRASES_FILE_PATH]` with the path to the file containing the list of phrases you want to remove. If `[PHRASES_FILE_PATH]` is not provided, NoExcuses will use the default path "./phrases.txt".
 
 ## 👌🏼 Usage
 
