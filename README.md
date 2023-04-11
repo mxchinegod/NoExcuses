@@ -24,7 +24,7 @@ NoExcuses reads each JSON file in the specified directory and removes any occurr
 
 ## 🔮 Philosophy
 
-NoExcuses is designed to be used in early stages of token data processing. When considering if I should try doing similar work with vector representations, it doesn't make as much sense. Maybe I will change my mind about this in the future but this should happen prior to storing language vectors 😌
+NoExcuses is designed to be used in early stages of token data processing. When considering if I should try doing similar work with vector representations, it doesn't make as much sense. Maybe I will change my mind about this in the future but discriminate token processing like will probably happen prior to storing language vectors in your workflow 😌
 
 ## 🔌 Implementation Details
 
