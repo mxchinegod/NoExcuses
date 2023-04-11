@@ -5,7 +5,14 @@
 </h1>
 <p align="center">
 A super-fast way to delete unwanted tokens in text training data.
+
 </p>
+
+<center>
+
+![build](https://github.com/DylanAlloy/NoExcuses/actions/workflows/build.yml/badge.svg)
+
+</center>
 
 This is a Rust program that removes phrases from all JSON files in a given directory. NoExcuses reads a list of phrases from a file, then iterates through each JSON file in a given directory and removes any occurrence of those phrases. NoExcuses writes back the modified JSON files to their original location.
 
