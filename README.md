@@ -17,7 +17,7 @@ To get started, clone the repository and run cargo build to compile the project.
 ./target/debug/no_excuses [DIRECTORY_PATH] [PHRASES_FILE_PATH]
 ```
 
-    Replace `[DIRECTORY_PATH]` with the path to the directory that contains the JSON files you want to modify, and `[PHRASES_FILE_PATH]` with the path to the file containing the list of phrases you want to remove. If `[PHRASES_FILE_PATH]` is not provided, NoExcuses will use the default path "./phrases.txt"
+<sub>Replace `[DIRECTORY_PATH]` with the path to the directory that contains the JSON files you want to modify, and `[PHRASES_FILE_PATH]` with the path to the file containing the list of phrases you want to remove. If `[PHRASES_FILE_PATH]` is not provided, NoExcuses will use the default path "./phrases.txt"</sub>
 
 ## 👌🏼 Usage
 
